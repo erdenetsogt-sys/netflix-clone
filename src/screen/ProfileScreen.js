@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
+import { PlansScreen } from "./PlansScreen";
 export const ProfileScreen = () => {
   const user = useSelector(selectUser);
   const navigate = useNavigate();
@@ -27,6 +28,7 @@ export const ProfileScreen = () => {
             <h2>{user.email}</h2>
             <div className="profileScreen__plans">
               <h3>Plans</h3>
+              <PlansScreen />
               <button
                 className="profileScreen__signOut"
                 onClick={() => auth.signOut().then(() => navigate("/"))}

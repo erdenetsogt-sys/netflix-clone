@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.1",
+    "@stripe/stripe-js": "^3.0.6",
     "axios": "^1.6.7",
     "cra-template-redux": "2.0.0",
     "firebase": "^10.8.1",

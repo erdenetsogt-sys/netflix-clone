@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./SignupScreen.css";
-import { auth } from "../firebase";
+import { auth, db } from "../firebase";
 export const SignupScreen = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
@@ -16,6 +16,20 @@ export const SignupScreen = () => {
       })
       .catch((error) => alert(error.message));
   };
+  // const register = (e) => {
+  //   e.preventDefault();
+  //   auth
+  //     .createUserWithEmailAndPassword(
+  //       emailRef.current.value,
+  //       passwordRef.current.value
+  //     )
+  //     .then((authUser) => {
+  //       return db.collection("customers").doc(authUser.user.uid).set({
+  //         email: authUser.user.email,
+  //       });
+  //     })
+  //     .catch((error) => alert(error.message));
+  // };
   const signIn = (e) => {
     e.preventDefault();
     auth
